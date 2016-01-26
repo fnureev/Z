@@ -1,5 +1,5 @@
 # error
-local ret_status="%(?::%{$bg[red]%}%{$fg_bold[block]%} ERR %{$reset_color%})"
+local ret_status="%(?::%{$bg[red]%}%{$fg_bold[white]%} ERR %{$reset_color%})"
 
 # vim is running
 local vim_status=""
