@@ -3,9 +3,6 @@ export ZSH=/home/faat/.oh-my-zsh
 ZSH_THEME="my-theme"
 HIST_STAMPS="dd.mm.yyyy"
 
-# autocorrection
-setopt CORRECT_ALL
-
 export KEYTIMEOUT=1
 
 plugins=(colored-man-pages git git-flow z vi-mode history-substring-search)
