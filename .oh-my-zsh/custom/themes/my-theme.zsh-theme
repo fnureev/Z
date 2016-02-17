@@ -46,5 +46,5 @@ function my_git_prompt_info() {
 # vi-mode
 MODE_INDICATOR="%{$bg[blue]%}%{$fg_bold[white]%} NORMAL %{$reset_color%}"
 
-PROMPT='%{$fg_bold[white]%}%c: '
+PROMPT='%{$fg_bold[white]%}%c: %{$reset_color%}'
 RPROMPT='$(vi_mode_prompt_info)${vim_status}${ret_status}$(my_git_prompt_info)'
