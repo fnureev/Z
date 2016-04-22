@@ -46,5 +46,19 @@ function my_git_prompt_info() {
 # vi-mode
 MODE_INDICATOR="%{$bg[blue]%}%{$fg_bold[white]%} NORMAL %{$reset_color%}"
 
+# execution time
+local execution_time="";
+function preexec() {
+  timer=${timer:-$SECONDS}
+}
+
+function precmd() {
+  if [ $timer ]; then
+    timer_show=$(($SECONDS - $timer))
+    execution_time="%F{cyan}${timer_show}s %{$reset_color%}"
+    unset timer
+  fi
+}
+
 PROMPT='%{$fg_bold[white]%}%c: %{$reset_color%}'
-RPROMPT='$(vi_mode_prompt_info)${vim_status}${ret_status}$(my_git_prompt_info)'
+RPROMPT='${execution_time}$(vi_mode_prompt_info)${vim_status}${ret_status}$(my_git_prompt_info)'
