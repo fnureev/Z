@@ -17,3 +17,5 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
+
+alias regrep='grep -rEin --exclude-dir={PreGenerated,static,clientside,compiled}'
