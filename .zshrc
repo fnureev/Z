@@ -1,4 +1,4 @@
-export ZSH=/home/faat/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="my-theme"
 HIST_STAMPS="dd.mm.yyyy"
